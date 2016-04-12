@@ -38,3 +38,10 @@ gap> Orbits(disc);
 ```
 
 Note that `disc` acts transitively.
+
+## Primitivity
+To examine if `disc` is primitive, we search for a non-trivial block.
+
+```
+gap> parities := Blocks(disc, MovedPoints(disc));
+```
