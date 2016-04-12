@@ -45,3 +45,12 @@ To examine if `disc` is primitive, we search for a non-trivial block.
 ```
 gap> parities := Blocks(disc, MovedPoints(disc));
 ```
+
+## Action on Blocks
+To determine how `disc` acts on the two blocks create an `ActionHomomorphism`.
+
+```
+gap> morphism := ActionHomomorphism(disc, parities, OnSets);
+gap> disc2 := Image(morphism);
+gap> Size(disc2);
+```
