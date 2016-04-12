@@ -16,3 +16,16 @@ gap> Read("./puzzle-disc.g");
 ```
 
 This makes the variable `disc` available.
+
+## Size of `disc`
+To determine the size of the group use the following commands
+
+```
+gap> Size(disc);
+```
+
+Or if you want the factors
+
+```
+gap> Collected( Factors( Size(disc) ) );
+```
