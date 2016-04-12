@@ -29,3 +29,12 @@ Or if you want the factors
 ```
 gap> Collected( Factors( Size(disc) ) );
 ```
+
+## Orbits
+To determine the orbits of the group action use
+
+```
+gap> Orbits(disc);
+```
+
+Note that `disc` acts transitively.
