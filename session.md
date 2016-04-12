@@ -54,3 +54,19 @@ gap> morphism := ActionHomomorphism(disc, parities, OnSets);
 gap> disc2 := Image(morphism);
 gap> Size(disc2);
 ```
+
+## Permutations as words in generators
+We will now demonstrate how to determine words in the generators that produce
+certain permutations.
+
+```
+gap> f := FreeGroup("r", "s");
+gap> hom := GroupHomomorphismByImages(f, disc, GeneratorsOfGroup(f), GeneratorsOfGroup(disc));
+```
+
+With this homomorphism we can calculate preimages.
+
+```
+gap> (1, 3)(2, 4) in disc;
+gap> PreImagesRepresentative(hom, (1, 3)(2, 4));
+```
